@@ -25,22 +25,24 @@ def inorder(root) -> None:
     # Write your code here
     if root:
         inorder(root.left)
-        print(root.data)
+        print(root.data, end =' ')
         inorder(root.right)
 
 
 def preorder(root) -> None:
     # Write your code here
-    print(root.data)
-    preorder(root.left)
-    preorder(root.right)
+    if root:
+        print(root.data, end=' ')
+        preorder(root.left)
+        preorder(root.right)
 
 
 def postorder(root) -> None:
     # Write your code here
-    postorder(root.left)
-    postorder(root.right)
-    print(root.data)
+    if root:
+        postorder(root.left)
+        postorder(root.right)
+        print(root.data, end = ' ')
 
 # Do not change the following code
 input_data = input()
